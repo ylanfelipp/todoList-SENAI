@@ -6,3 +6,8 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.filterTask {
+    position: relative;
+    top: 15%;
+}
