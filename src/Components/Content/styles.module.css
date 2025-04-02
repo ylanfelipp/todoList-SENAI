@@ -1,0 +1,8 @@
+.mainContent {
+    background-color: var(--bg-color);
+    height: calc(100vh - 4.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}

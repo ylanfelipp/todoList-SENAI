@@ -1,0 +1,58 @@
+.taskAdd {
+    margin-top: 4rem;
+    width: 18.75rem;
+    height: 5rem;
+}
+
+.taskAdd div {
+    margin: 1rem 0;
+}
+
+.taskAdd label {
+    color: var(--font-light-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.taskAdd input {
+    background-color: var(--rect-color);
+    color: var(--font-light-color);
+    width: 100%;
+    height: 2.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: 2px solid #495057;
+}
+
+.taskAdd input:focus {
+    outline: 2px solid var(--concluido-color);
+}
+
+.btnAdd {
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnAdd button {
+    background-color: var(--button-add-color);
+    color: var(--font-light-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 100%;
+    width: 8.25rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: #495057;
+    border: 1px solid transparent;
+    transition: all ease 300ms;
+}
+
+.btnAdd button:hover {
+    background-color: var(--concluido-color);
+    color: var(--button-add-color);
+    border-color: var(--button-add-color);
+}
