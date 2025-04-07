@@ -5,9 +5,9 @@ const InputTask = ({ setInputValue, inputValue, setTaskListView }) => {
     const [inputValueTask, setInputValueTask] = useState("")
     const createTask = (e) => {
         e.preventDefault()
+        if (inputValueTask.trim() === "")  return
         const randomId = Math.floor(Math.random() * 10000) + 1
         setInputValue(() => {
-            if (inputValueTask.trim() === "")  return
             const newArrayTask = [...inputValue, { id: randomId, name: inputValueTask, status: false }]
             setTaskListView(newArrayTask)
             setInputValueTask("")
