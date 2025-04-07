@@ -1,11 +1,11 @@
 import styles from "./styles.module.css"
 import TaskItem from '../TaskItem/TaskItem'
 
-const TaskList = ({ taskList }) => {
+const TaskList = ({ taskListView, setTaskListView, setTaskList }) => {
     return (
         <div className={styles.listTask}>
-            {taskList.map((task) => (
-                <TaskItem task={{...task}} key={task.id}/>
+            {taskListView.map((task) => (
+                <TaskItem task={task} key={task.id} setTaskListView={setTaskListView} setTaskList={setTaskList} />
             ))}
         </div>
     )

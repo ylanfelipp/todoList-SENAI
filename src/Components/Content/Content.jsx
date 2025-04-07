@@ -7,22 +7,24 @@ import TaskList from '../TaskList/TaskList'
 const Content = () => {
     const [taskList, setTaskList] = useState([
         {
-            id: "0001",
+            id: 1,
             name: "Ir ao Mercado",
             status: "pendente"
         }
     ])
+    const [filter, setFilter] = useState("todos")
+    const filterTasks = filter === "todos" ? taskList : filter === taskList.filter(task => task.status === filter)
     const [taskListView, setTaskListView] = useState(taskList)
     return (
         <main className={styles.mainContent}>
             <section className={styles.inputTask}>
-                <InputTask setInputValue={setTaskList} />
+                <InputTask setInputValue={setTaskList} inputValue={taskList} setTaskListView={setTaskListView} />
             </section>
             <section className={styles.filterTask}>
-                <Filter setInputValue={setTaskList} setTaskListView={setTaskListView} />
+                <Filter filter={setTaskList} setFilter={setFilter} />
             </section>
             <section>
-                <TaskList taskList={taskListView} />
+                <TaskList taskListView={taskListView} setTaskListView={setTaskListView} setTaskList={setTaskList} />
             </section>
         </main>
     )

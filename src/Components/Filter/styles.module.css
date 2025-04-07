@@ -1,6 +1,7 @@
 .taskFilter {
-    width: 18.75rem;
-    /* margin-top: 6rem; */
+    height: 100px;
+    width: 250px;
+    margin-top: 3rem;
 }
 
 .taskFilter label {
