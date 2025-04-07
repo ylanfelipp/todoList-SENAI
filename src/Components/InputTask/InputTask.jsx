@@ -8,7 +8,7 @@ const InputTask = ({ setInputValue, inputValue, setTaskListView }) => {
         const randomId = Math.floor(Math.random() * 10000) + 1
         setInputValue(() => {
             if (inputValueTask.trim() === "")  return
-            const newArrayTask = [...inputValue, { id: randomId, name: inputValueTask, status: "pendente" }]
+            const newArrayTask = [...inputValue, { id: randomId, name: inputValueTask, status: false }]
             setTaskListView(newArrayTask)
             setInputValueTask("")
             return newArrayTask

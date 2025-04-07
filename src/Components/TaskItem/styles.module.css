@@ -1,11 +1,12 @@
 .taskItem {
     background-color: var(--rect-color);
     color: var(--font-light-color);
-    height: 50px;
+    min-height: 50px;
     width: 300px;
     margin-top: 1rem;
     padding: 1rem;
     display: flex;
+    align-items: center;
     justify-content: space-around;
     border-radius: 0.5rem;
 }
